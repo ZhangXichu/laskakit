@@ -40,10 +40,10 @@ void change_led()
 {
   for (int i = 0; i < led_num; i++)
   {
-    digitalWrite(led_pin[i], LOW);
+    digitalWrite(led_pin[i], HIGH);
   }
 
-  digitalWrite(led_pin[current_led], HIGH);
+  digitalWrite(led_pin[current_led], LOW); // active low
 
   current_led += direction;
 
