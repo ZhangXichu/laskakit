@@ -8,6 +8,8 @@ int volt = A0;
 void setup() {
   Serial.begin(9600);
   unsigned long start = millis();
+
+  // wait 3s for Serial
   while (!Serial && millis() - start < 3000) { } 
 
   lcd.init();
